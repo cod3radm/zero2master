@@ -14,5 +14,5 @@ First Month: The Big Picture (April)
   09. Understand how to use templates to build websites using themes and templates
   10. If time permits do a few courses on HTML and CSS at freeCodeCamp.org (I already finished this sections building a Cat Photo App)
   
-Second Month: JavaScript
-  This will be where most of focus will be in the months to come.
+Second Month: JavaScript (May)
+  *   This will be where most of focus will be in the months to come.
