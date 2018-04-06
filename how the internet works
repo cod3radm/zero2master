@@ -7,7 +7,32 @@ As a Web Developer we need to be familiar with what the browser does to access t
     c. Your PC connects to the Server and provides the files for that site (www.mysite.com)
         i. index.html (content-type) text/html [request]
     d. The browser starts to parse the file from top to bottom and stops if it finds an asset 
-        i. main.css, js, img) text/css [request]
+        i. main.css text/css [request]
+            * js, img [request]
     e. Loads the site quicker
         i. CSS should load first in the <head> element
        ii. Scripts could be place at the bottom of your index.html before </body> element
+      iii. Concatenate all the scripts files into 1 file to avoid many requests to the Server (Minify script files)
+       iv. xhr request - is an API in the form of an object whose methods transfer data between a web browser and a web server
+    f. Request - may contain headers and post body
+        i. Open Chrome Developer tools and open the Network tab
+            * Request headers > host: www.google.com
+                                method: GET / POST (email)
+                                path: /
+                                cookie: PREF=ID=eca0a52b23... (cookies are stored in your computer)
+            * Response headers > content-type: text/html
+                                 status: 200 OK (300 redirected, 400 error, 500 server broken) - JavaScript status
+            * Google Homepage Request > method: GET / POST (login) / PUT (edit) / DELETE
+                                        user-agent: BACK-END will identify what kind of device
+                                        method: POST
+                                        path: login
+                                        content-type: application/json
+                                        request body: (username: kittyme)
+                                        password: myPaw2jump!
+                             Response > status: 200 ok
+                                        content-type: application/json
+                                        response-body: {username
+                                                       permission
+                                                       postCount
+                                                       lastLoggedOn
+                                                       userID }
