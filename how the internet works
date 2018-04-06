@@ -1,4 +1,13 @@
 How does the Internet work? How would you answer that question? Most of the people using their computers to browse the net doesn't have a clue... for the most part. They only know to turn on their computer and open the browser and begin navigating (browse) the sites.
 
 As a Web Developer we need to be familiar with what the browser does to access the internet
-1.  
+1.  PC/Browser(92.84.143.240) is making a request to a Remote Server(e.g. 63.41.23.122) and the Server is response to the request
+    a. Any device(pc, laptop, phone, tablet) that connects to the internet has an IP Address
+    b. If you type on your browser take me to www.mysite.com, your ISP does DNSlookup which translate the name to an IP Address
+    c. Your PC connects to the Server and provides the files for that site (www.mysite.com)
+        i. index.html (content-type) text/html [request]
+    d. The browser starts to parse the file from top to bottom and stops if it finds an asset 
+        i. main.css, js, img) text/css [request]
+    e. Loads the site quicker
+        i. CSS should load first in the <head> element
+       ii. Scripts could be place at the bottom of your index.html before </body> element
