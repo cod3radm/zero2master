@@ -1,0 +1,34 @@
+What is the server world look like from a web development? how does the internet work from the back-end?
+
+The Internet Service Provider does DNS lookup, and translate the TLD to an IP Address.
+1.  Browser(10.1.1.1) sometimes they're call Clients making a request to Server(e.g. 63.41.23.122) and the Server is going to post responses. The Server is 100% responsible for those responses. (e.g. request google.com and google server response with an image)
+    a. Basic "Web Site" Server - LAMP
+    b. If you sign up for a Web Host package, you'll get cPanel (manages many things)
+        i. Linux running system
+            * Apache (listens to port 80 [HTTP] http://63.41.23.122:80)
+                * FILESYSTEM (sites/mysite.com/www folder)
+                    * index.html or index.php
+                    * about.html
+                    * contact.html
+                    * img/logo.jpg
+                    * css/styles.css
+                    * js/jquery.js
+            * MySQL
+            * PHP
+    c. "Web Application" Server (twitter)
+        i. Ruby on Rails
+       ii. PHP (web framework as Laravel, codeigniter)
+      iii. JavaScript (framework as node.js)
+    d. twitter.com/home
+        i. twitter.com/login
+            * SQL or MongoDB
+    e. index template
+        i. loads all the tweets
+    f. Javascript makes a delete request
+        i. delete tweet ID: 1
+            * sends a delete request to database
+    g. Web Application manage 3 different things: Template, generating HTML, manage API, handle static assets
+    h. If server is getting overloaded with requests due to popularity; upgrade to more RAM and Processing speed
+    i. Load Balancer - checks which server has more capacity
+    j. Scaling - adding more servers as needed
+    k. Deployment process - send code to all servers in one command
